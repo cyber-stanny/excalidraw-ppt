@@ -3,8 +3,8 @@ const path = require('path');
 const puppeteer = require('puppeteer');
 
 (async () => {
-  const excalidrawPath = '/Users/daipeng/Workspace/excalidraw-ppt/workbuddy-cloud-slides/workbuddy-cloud-slides.excalidraw';
-  const outDir = '/Users/daipeng/Workspace/excalidraw-ppt/workbuddy-cloud-slides/exports';
+  const outDir = __dirname;
+  const excalidrawPath = path.resolve(__dirname, '../workbuddy-cloud-slides.excalidraw');
   const htmlPath = path.join(outDir, 'export_runner.html');
 
   const raw = fs.readFileSync(excalidrawPath, 'utf8');

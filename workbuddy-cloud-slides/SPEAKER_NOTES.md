@@ -20,7 +20,7 @@
 
 ### Slide 01 · 揭开本质：什么是 Serverless（无服务器）？
 * **建议时长**：5 分钟
-* **对应幻灯片**：[slide_01.png](file:///Users/daipeng/Workspace/excalidraw-ppt/workbuddy-cloud-slides/exports/slide_01.png)
+* **对应幻灯片**：[slide_01.png](./exports/slide_01.png)
 * **课堂互动 / 提问导入**：
   > “大家平时听过‘云服务’这个词吗？是不是觉得它很高深，还要去买一台 Linux 电脑，装各种复杂的环境？今天 WorkBuddy 告诉大家‘我把后端全包了’，那它到底包了什么？”
 * **核心讲解要点**：
@@ -39,7 +39,7 @@
 
 ### Slide 02 · 什么时候你的应用需要「云服务」？
 * **建议时长**：4 ~ 5 分钟
-* **对应幻灯片**：[slide_02.png](file:///Users/daipeng/Workspace/excalidraw-ppt/workbuddy-cloud-slides/exports/slide_02.png)
+* **对应幻灯片**：[slide_02.png](./exports/slide_02.png)
 * **核心讲解要点**：
   1. **纯前端静态（免云服务）**：
      * 个人作品集、海报、单机计算器。所有计算在本地浏览器内存中，刷新即重置，不收集外界信息。
@@ -56,7 +56,7 @@
 
 ### Slide 03 · WorkBuddy 云服务五大核心能力全景
 * **建议时长**：3 ~ 4 分钟
-* **对应幻灯片**：[slide_03.png](file:///Users/daipeng/Workspace/excalidraw-ppt/workbuddy-cloud-slides/exports/slide_03.png)
+* **对应幻灯片**：[slide_03.png](./exports/slide_03.png)
 * **核心讲解要点**：
   1. **五大生活化隐喻串联**：
      * 🗄️ **数据库** ➔ **「电子记账本」**：存文字、数字、业务状态。
@@ -72,7 +72,7 @@
 
 ### Slide 04 · 能力 ① · 数据库（Database）：应用的电子记账本
 * **建议时长**：4 ~ 5 分钟
-* **对应幻灯片**：[slide_04.png](file:///Users/daipeng/Workspace/excalidraw-ppt/workbuddy-cloud-slides/exports/slide_04.png)
+* **对应幻灯片**：[slide_04.png](./exports/slide_04.png)
 * **核心讲解要点**：
   1. **结构化数据**：就像 Excel 表格，一列一个属性（标题、时间、状态）。
   2. **AI 时代的体验升级**：不用手写 SQL，告诉 WorkBuddy“我要做一个相册”，AI 自动建好表结构。
@@ -85,7 +85,7 @@
 
 ### Slide 05 · 能力 ② · 文件存储（Storage）：海量多媒体大仓库
 * **建议时长**：4 ~ 5 分钟
-* **对应幻灯片**：[slide_05.png](file:///Users/daipeng/Workspace/excalidraw-ppt/workbuddy-cloud-slides/exports/slide_05.png)
+* **对应幻灯片**：[slide_05.png](./exports/slide_05.png)
 * **核心讲解要点**：
   1. **工业级标准协作三步法**：
      * **Step 1**：用户上传照片，直传腾讯云对象存储（COS）大仓库。
@@ -100,7 +100,7 @@
 
 ### Slide 06 · 能力 ③ · 身份认证（Authentication）：专属门禁卡
 * **建议时长**：4 ~ 5 分钟
-* **对应幻灯片**：[slide_06.png](file:///Users/daipeng/Workspace/excalidraw-ppt/workbuddy-cloud-slides/exports/slide_06.png)
+* **对应幻灯片**：[slide_06.png](./exports/slide_06.png)
 * **核心讲解要点**：
   1. **玩具项目 vs 正式产品的分水岭**：加上多用户登录，应用才具备私密性与商业价值。
   2. **通俗化避坑**：
@@ -113,7 +113,7 @@
 
 ### Slide 07 · 能力 ④ · 数据统计（Analytics）：驾驶舱仪表盘
 * **建议时长**：3 ~ 4 分钟
-* **对应幻灯片**：[slide_07.png](file:///Users/daipeng/Workspace/excalidraw-ppt/workbuddy-cloud-slides/exports/slide_07.png)
+* **对应幻灯片**：[slide_07.png](./exports/slide_07.png)
 * **核心讲解要点**：
   1. **告别黑盒开发**：上线后不再是盲人摸象。
   2. **三大必看维度**：
@@ -127,7 +127,7 @@
 
 ### Slide 08 · 能力 ⑤ · 内置大模型能力：外脑智囊顾问
 * **建议时长**：5 ~ 6 分钟
-* **对应幻灯片**：[slide_08.png](file:///Users/daipeng/Workspace/excalidraw-ppt/workbuddy-cloud-slides/exports/slide_08.png)
+* **对应幻灯片**：[slide_08.png](./exports/slide_08.png)
 * **核心讲解要点**：
   1. **传统调 AI 的致命痛点**：
      * 必须去各个模型平台绑卡充值申请 API Key；

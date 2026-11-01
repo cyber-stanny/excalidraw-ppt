@@ -45,9 +45,9 @@
 
 ### 1. 工具与环境保障
 - 本机已配置并授权官方工具 **`lark-cli`**，支持直接调用飞书开放平台 OpenAPI。
-- 非交互式执行环境下，必须首先补充环境变量确保工具可用：
+- 非交互式执行环境下，若未识别到命令，可动态载入用户环境下的 Node/nvm bin 路径：
   ```bash
-  export PATH="/Users/daipeng/.nvm/versions/node/v24.4.1/bin:$PATH"
+  export PATH="$(find $HOME/.nvm/versions/node -maxdepth 2 -name bin 2>/dev/null | tail -n 1):$PATH"
   ```
 
 ### 2. 核心红线：严禁破坏既有内容（零越权修改）

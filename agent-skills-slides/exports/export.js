@@ -3,8 +3,8 @@ const path = require('path');
 const puppeteer = require('puppeteer');
 
 (async () => {
-  const excalidrawPath = '/Users/daipeng/Workspace/excalidraw-ppt/agent-skills-slides/agent-skills-slides.excalidraw';
-  const outDir = '/Users/daipeng/Workspace/excalidraw-ppt/agent-skills-slides/exports';
+  const outDir = __dirname;
+  const excalidrawPath = path.resolve(__dirname, '../agent-skills-slides.excalidraw');
   const htmlPath = path.join(outDir, 'export_runner.html');
 
   const raw = fs.readFileSync(excalidrawPath, 'utf8');

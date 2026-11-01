@@ -707,7 +707,7 @@ doc = {
     "files": {}
 }
 
-output_path = "/Users/daipeng/Workspace/excalidraw-ppt/workbuddy-cloud-slides/workbuddy-cloud-slides.excalidraw"
+output_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "workbuddy-cloud-slides.excalidraw")
 
 with open(output_path, "w", encoding="utf-8") as f:
     json.dump(doc, f, ensure_ascii=False, indent=1)
