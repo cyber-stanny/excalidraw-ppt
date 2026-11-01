@@ -36,3 +36,38 @@
 
 ### 3. 生成脚本生命周期
 - 任何用于从 0 到 1 快速搭建骨架的 Python/JS 脚本，在骨架搭建完成后即归档为只读模板/历史工具，不得再次对活跃中的工作文件运行覆写。
+
+---
+
+## 飞书在线教学文档联动与精准更新规范（Lark-CLI 工作流）
+
+当用户要求将课件资产、截图或复盘内容同步/更新到飞书在线教学文档（Wiki / Docx）时，必须严格遵守以下规范：
+
+### 1. 工具与环境保障
+- 本机已配置并授权官方工具 **`lark-cli`**，支持直接调用飞书开放平台 OpenAPI。
+- 非交互式执行环境下，必须首先补充环境变量确保工具可用：
+  ```bash
+  export PATH="/Users/daipeng/.nvm/versions/node/v24.4.1/bin:$PATH"
+  ```
+
+### 2. 核心红线：严禁破坏既有内容（零越权修改）
+- **严禁全量覆写**：绝对禁止对飞书文档使用 `overwrite`，严禁改动任何未被明确授权的已有章节。
+- **只动标记区**：仅且只能修改用户明确标记了 `【TODO】` 或明确指定的单点 block。
+
+### 3. 标准化 5 步精准更新工作流
+1. **解析节点**：若用户提供的是 Wiki 链接，先执行 `lark-cli wiki +node-get --node-token <token>` 获取底层的 `obj_token`（docx 类型）。
+2. **定位目标 Block**：使用 `lark-cli docs +fetch --doc <token> --detail with-ids`（可配合 `--scope keyword --keyword "TODO"`），获取目标段落专属的唯一 `id`（如 `id="FkZbdrj..."`）。
+3. **载荷编写（XML 优先）**：
+   - 优先采用 XML 格式，富文本及高亮块表达力更强；
+   - 插入本地图片直接使用 `<img path="@path/to/image.png" caption="..."/>`，CLI 会自动调度 Drive 接口完成上传与块绑定；
+   - 临时 XML 文件必须保存在当前工作目录或 `/tmp/` 目录下（受 CLI 安全白名单限制）。
+4. **Dry-Run 校验与精准替换**：
+   - 复杂更新先追加 `--dry-run` 预览 API 调用链；
+   - 执行局部单块替换：
+     ```bash
+     lark-cli docs +update --doc <token> --command block_replace --block-id <target_id> --content '@/tmp/blocks.xml'
+     ```
+5. **分步更新与 Fetch 验证（Verify）**：
+   - 若文档中存在多个待处理的 TODO，**严禁使用同一轮 fetch 出的旧 ID 连续替换**；
+   - 必须每修改一处后重新 fetch 文档，确认生效并刷新剩余 TODO 的最新 block ID，再进行下一处修改。
+
