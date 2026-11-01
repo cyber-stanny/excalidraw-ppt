@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Excalidraw Export Canvas</title>
+  <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@excalidraw/excalidraw@0.17.6/dist/excalidraw.production.min.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+  <script>
+    console.log("ExcalidrawLib:", window.ExcalidrawLib);
+    if (window.ExcalidrawLib) {
+      window.__READY__ = true;
+    }
+  </script>
+</body>
+</html>
